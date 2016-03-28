@@ -1,0 +1,35 @@
+<div id="contact" ng-show="contactCtrl.show">
+	<p>CONTACTEZ NOUS PAR TÉLÉPHONE OU PAR E-MAIL</p>
+	<p>Contrary to popular belief. Lorem ipsum is not simply random text.</p>
+	<div class="num">03 28 330 830</div>
+	<form id="contactForm" name="contactForm" novalidate ng-hide="contactCtrl.send" ng-submit="contactForm.$valid && contactCtrl.submit()">
+		<label>
+			<span>Nom : *</span>
+			<input type="text" required ng-minlength="3" ng-model="contactCtrl.contact.name" >
+		</label>
+		<label>
+			<span>Prénom : *</span>
+			<input type="text" required ng-minlength="3" ng-model="contactCtrl.contact.firstname">
+		</label>
+		<label>
+			<span>Adresse e-mail : *</span>
+			<input type="email" required ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-model="contactCtrl.contact.mail">
+		</label>
+		<label>
+			<span>Objet du message : *</span>
+			<select type="text" required ng-model="contactCtrl.contact.object">
+				<option value=""></option>
+				<option value="Plus d'information">Plus d'information</option>
+				<option value="Problème">Problème</option>
+			</select>
+		</label>
+		<label>
+			<span>Message : *</span>
+			<textarea required ng-model="contactCtrl.contact.message"></textarea>
+		</label>
+		<div class="mandatory">* Champs obligatoires</div>
+		<div class="validation" style="display:none;"></div>
+		<button type="submit" ng-disabled="!contactForm.$valid">Envoyer</button>
+	</form>
+	<div class="send" ng-show="contactCtrl.send">Thanks</div>
+</div>

@@ -1,0 +1,9 @@
+<div id="carousel">
+	<ul rn-carousel rn-carousel-controls rn-carousel-buffered class="image">
+		<li ng-repeat="images in carouselCtrl.images track by $index">
+			<span ng-repeat="image in images track by $index" class="carousel-image ng-binding">
+					<img ng-src="{{ image }}">
+			</span>
+		</li>
+	</ul>
+</div>

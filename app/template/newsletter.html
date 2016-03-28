@@ -1,0 +1,14 @@
+<div id="newsletter" ng-show="newsletterCtrl.show">
+	<p>LA NEWSLETTER</p>
+	<p>L'actu et les bonnes affaires à ne pas manquer</p>
+	<form id="subscribeForm" name="subscribeForm" novalidate 
+			ng-submit="subscribeForm.$valid && newsletterCtrl.submit()"
+			ng-hide="newsletterCtrl.send">
+		<input type="email" placeholder="Votre adresse e-mail" required
+				ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" 
+				ng-model="newsletterCtrl.newsletter.mail" >
+		<button type="submit" ng-disabled="!subscribeForm.$valid">Ok</button>
+	</form>
+
+	<div class="send" ng-show="newsletterCtrl.send">Thanks</div>
+</div>

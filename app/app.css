@@ -1,0 +1,437 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ALTIMA CSS */
+
+body {
+	max-width: 768px;
+	text-align: center;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+	font-size: 0.8em;
+}
+
+a:hover {
+	cursor: pointer; cursor: hand;
+}
+
+a[disabled]:hover {
+	cursor: initial;
+}
+
+#header, #body, #footer {
+	text-align: initial;
+}
+
+#body {
+	padding: 20px 0;
+	color: grey;
+}
+
+.hidden {
+	display: none;
+}
+
+form button {
+	color: black;
+}
+
+form button[disabled], form button:disabled {
+	color: grey;
+}
+
+form .ng-invalid.ng-dirty, form .ng-valid.ng-dirty {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+form input, form textarea {
+	border-radius: 5px;
+	border-style: solid;
+	border-color: lightgrey;
+	resize: none;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+}
+
+form .ng-invalid.ng-dirty {
+	border-color: #FA787E;
+	
+}
+
+form .ng-valid.ng-dirty {
+	border-color: #3AF24B;
+}
+
+form#loginForm .ng-invalid.ng-dirty, form#loginForm .ng-valid.ng-dirty {
+	border-color: lightgrey;
+}
+
+
+/* HEADER */
+#header {
+	margin-top: 5px;
+	position: relative;
+}
+
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	font-size: 3em;
+	float: left;
+	font-weight: bold;
+}
+
+#logo .dot {
+	color: rgb(193, 10, 66);
+}
+
+#login {
+	float: right;
+	padding-top: 10px;
+}
+
+#loginForm input {
+	margin-right: 10px;
+}
+
+#login .logout {
+	color: blue;
+	text-decoration: underline;
+}
+
+#menu {
+	clear: both;
+	padding-top: 20px;
+}
+
+#menu .menuItem {
+	float: right;
+	margin-left: 50px; 
+	position: relative;
+}
+
+#menu .menuItem a {
+	color: rgb(193, 10, 66);
+	font-weight: bold;
+}
+
+#menu .menuItem .shape {
+	position: absolute;
+	top: 20px; left: 0;
+	width:100%; height: 10px; 
+	background: rgb(140, 10, 66);
+}
+#menu .menuItem .shape:before {
+	content: "";
+	position: absolute;
+	top: 10px; right: 0;
+	width: 50%; height: 8px;
+	background: linear-gradient(to right bottom, rgb(140, 10, 66) 50%, transparent 50%)
+}
+
+#menu .menuItem .shape:after {
+	content: "";
+	position: absolute;
+	top: 10px; left: 0;
+	width: 50%; height: 8px;
+	background: linear-gradient(to left bottom, rgb(140, 10, 66) 50%, transparent 50%)
+}
+
+#menuSeparator {
+	clear: both;
+	height: 7px;
+}
+
+#menuBar {
+	clear: both;
+	margin: 0 -100%;
+	height: 10px;
+	background-color: rgb(193, 10, 66);
+}
+
+
+/* BODY */
+
+#body h1.title {
+	margin: auto;
+	text-align: center;
+	color: lightgrey;
+	font-size: 2.8em;
+	margin-bottom: 10px;
+}
+
+
+#newsletter, #contact {
+	margin-top: 15px;
+	border: 1px solid darkgrey;
+	border-radius: 10px;
+	padding: 15px;
+	background-color: lightgrey;
+
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+
+	-webkit-box-shadow: inset -1px 3px 4px 0px darkgrey;
+	-moz-box-shadow: inset -1px 3px 4px 0px darkgrey;
+	box-shadow: inset -1px 3px 4px 0px darkgrey;
+}
+
+#newsletter, #articleList {
+	float: left;
+	width: 45%;
+}
+
+#newsletter {
+	margin-bottom: 15px;
+}
+
+#newsletter .send, #subscribeForm {
+	margin-top: 10px;
+}
+
+#subscribeForm input {
+	width: 200px;
+	margin-right: 20px;
+}
+
+#contact {
+	float: right;
+	width: 50%;
+}
+
+#contact .num {
+	margin: 10px 0px;
+	padding: 3px 0px;
+	color: rgb(193, 10, 66);
+	font-weight: bold;
+	font-size: 1.1em;
+	border-top: 1px solid darkgrey;
+	border-bottom: 1px solid darkgrey;
+	text-align: center;
+}
+
+#contactForm {
+	margin-top: 10px;
+}
+
+#contactForm label {
+	display: inline-block;
+	color: black;
+	margin-bottom: 5px;
+}
+
+#contactForm label, #contactForm button, #contactForm .mandatory, #contactForm .validation {
+	float: right;
+	clear: both;
+}
+
+#contactForm label, #contactForm .mandatory, #contactForm .validation {
+	padding-right: 40px;
+}
+
+#contactForm input, #contactForm select, #contactForm textarea {
+	margin-left: 10px;
+	width: 150px;
+	color: black;
+}
+
+#contactForm select {
+	width: 156px;
+}
+
+#contactForm textarea {
+	max-width: 150px;
+	max-height: 150px;
+	height: 80px;
+}
+
+#contactForm .mandatory {
+	color: darkgrey;
+}
+
+#contactForm .validation {
+	color: rgb(193, 10, 66);
+}
+
+#contactForm .send {
+	margin-top: 10px;
+}
+
+#contactForm button {
+	margin-top: 10px;
+	margin-right: 50px;
+} 
+
+#articleList {
+
+}
+
+#articleList.bigFormat {
+	width: 100%;
+}
+
+#articleList .article {
+	width: 100%;
+	clear: both;
+	margin: 10px 0;
+}
+
+#articleList .article p {
+	margin: 5px 0 10px 0;
+}
+
+#articleList .article .thumbs {
+	float: left;
+	margin-right: 10px;
+}
+
+#articleList .article .title {
+	font-size: 1.1em;
+	padding-top: 10px;
+	color: rgb(193, 10, 66);
+}
+
+#articleList .article .date {
+	font-size: 0.8em;
+	text-indent: 20px;
+}
+
+#articleList .article .data {
+	position: relative;
+}
+
+#articleList .article .content {
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+#articleList .article .plus {
+	position: absolute;
+	right: 5px;
+	color: rgb(193, 10, 66);
+	text-decoration: underline;
+}
+
+#articleList .article .prev, #articleList .article .next {
+	color: black;
+}
+
+#articleList .article .prev {
+	padding-left: 25px;
+	float: left;
+}
+
+#articleList .article .next {
+	padding-right: 25px;
+	float: right;
+}
+
+#carousel {
+	clear: both;
+	padding-top: 20px;
+	position: relative;
+	text-align: center;
+}
+
+#carousel .title {
+	color: rgb(193, 10, 66);
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#carousel ul {
+	width: 220px;
+	height: 80px;
+	display: inline-block;
+}
+
+#carousel span {
+	padding: 0 5px;
+}
+
+#carousel .rn-carousel-control.rn-carousel-control-prev {
+	left: 5.5em;
+}
+
+#carousel .rn-carousel-control.rn-carousel-control-next {
+	right: 5.5em;
+}
+
+.slick-slider {
+	margin: 0 50px;
+	padding-top: 10px;
+}
+
+.slick-list {
+	height: 80px;
+}
+
+.slick-next, .slick-prev {
+	background: 0 0;
+}
+
+.slick-next:before, .slick-prev:before {
+	font-size: 20px;
+	line-height: 1;
+	color: #00558B;
+	opacity: .75;
+}
+
+
+/* FOOTER */
+
+#footer {
+	clear: both;
+	padding-top: 15px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-weight: bold;
+}

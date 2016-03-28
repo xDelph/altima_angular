@@ -1,0 +1,21 @@
+<div id="articleList" class="{{ articleCtrl.fullscreen ? 'bigFormat' : '' }}">
+	<div class="article" 
+				ng-repeat="article in articleCtrl.articles" 
+				ng-show="articleCtrl.isVisible($index)">
+		<div class="thumbs">
+			<img ng-src="{{ articleCtrl.isFullscreen($index) ? article.picture : article.thumbnail }}">
+		</div>
+		<span class="title">{{ article.title }}</span>
+		<div class="date">{{ article.date }}</div>
+		<div class="data">
+			<div class="content">
+				<span ng-hide="articleCtrl.isFullscreen($index)">{{ article.intro | limitTo: 150 }}</span>
+				<span ng-show="articleCtrl.isFullscreen($index)" ng-bind-html="articleCtrl.trustAsHtml(article.content)"></span>
+				<span ng-hide="articleCtrl.isFullscreen($index)">...</span>
+			</div>
+			<a href="#/actu/{{ $index }}" class="plus" ng-hide="articleCtrl.isFullscreen($index)">En savoir plus &gt;&gt;</a>
+			<a href="#/actu/{{ $index-1 }}" class="prev" ng-show="articleCtrl.isFullscreen($index) && $index > 0">PRÉCÉDENT</a>
+			<a href="#/actu/{{ $index+1 }}" class="next" ng-show="articleCtrl.isFullscreen($index) && $index < articleCtrl.articles.length - 1">SUIVANT</a>
+		</div>
+	</div>
+</div>

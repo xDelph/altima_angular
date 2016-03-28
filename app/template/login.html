@@ -1,0 +1,11 @@
+<div id="login">
+	<form id="loginForm" name="loginForm" novalidate ng-hide="loginCtrl.authentified"ng-submit="loginForm.$valid && loginCtrl.submit()">
+		<input type="text" placeholder="Votre login" required ng-model="loginCtrl.user.login" >
+		<input type="password" placeholder="Votre password" required ng-model="loginCtrl.user.password">
+		<button type="submit" ng-disabled="!loginForm.$valid">Ok</button>
+	</form>
+
+	<div ng-show="loginCtrl.authentified">
+		Bonjour {{ loginCtrl.user.login | uppercase }}, <a class="logout" ng-click="loginCtrl.logout()">se déconnecter</a>
+	</div>
+</div>
